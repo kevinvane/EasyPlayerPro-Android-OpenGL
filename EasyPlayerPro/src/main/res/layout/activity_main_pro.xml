@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="org.easydarwin.easyplayer.PlayActivity">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/render_container"
+            android:layout_gravity="center"
+            android:background="#000000">
+
+            <!--<org.easydarwin.easyplayer.views.ProVideoView-->
+            <!--    android:id="@+id/video_view2"-->
+            <!--    android:layout_width="match_parent"-->
+            <!--    android:keepScreenOn="true"-->
+            <!--    android:visibility="gone"-->
+            <!--    android:layout_height="match_parent" />-->
+
+            <org.easydarwin.easyplayer.views.ProVideoView
+                android:id="@+id/video_view"
+                android:layout_width="match_parent"
+                android:keepScreenOn="true"
+                android:layout_height="match_parent" />
+
+            <ImageView
+                android:id="@+id/surface_cover"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#000000"
+                android:scaleType="centerCrop" />
+
+            <LinearLayout
+                android:id="@android:id/progress"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <ProgressBar
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:indeterminateBehavior="repeat"
+                    android:indeterminateDrawable="@drawable/anim" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="加载中"
+                    android:id="@+id/loading_speed"
+                    android:textColor="@color/colorTheme"
+                    android:gravity="center_horizontal"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/live_video_snap_thumb"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="right|top"
+                android:layout_margin="3dp"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="onTakePictureThumbClicked"
+                android:padding="3dp"
+                android:scaleType="centerCrop"
+                android:visibility="invisible" />
+
+            <LinearLayout
+                android:id="@+id/player_container"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="#fff"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:visibility="gone"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/new_lost"/>
+
+            </LinearLayout>
+
+            <!--布局也可以放到 media_controller.xml-->
+            <LinearLayout
+                android:id="@+id/player_filter"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:visibility="visible"
+                android:paddingTop="32dp"
+                android:paddingStart="@dimen/activity_horizontal_margin"
+                android:paddingEnd="@dimen/activity_horizontal_margin"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+                    <TextView
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:text="亮度"/>
+                    <SeekBar
+                        android:id="@+id/mSeekBarBrightness"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:max="200"
+                        android:progress="100"
+                        android:min="0"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:gravity="center_vertical">
+                    <TextView
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:text="对比度 "/>
+                    <SeekBar
+                        android:id="@+id/mSeekBarContrast"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:max="200"
+                        android:progress="100"
+                        android:min="0"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+                    <TextView
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:text="饱和度"/>
+                    <SeekBar
+                        android:id="@+id/mSeekBarSaturation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:max="200"
+                        android:progress="100"
+                        android:min="0"/>
+                </LinearLayout>
+            </LinearLayout>
+
+        </FrameLayout>
+
+    </LinearLayout>
+</layout>
