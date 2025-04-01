@@ -21,7 +21,26 @@ Three filter effects can be realized by calling the `IjkVideoView` interface:
 * Contrast
 * Saturation
 
-### Add to your project
+### 加入您的项目 Add to your project 
+
+1. Step 1. Add it in your root settings.gradle at the end of repositories:
+    ```gradle
+    dependencyResolutionManagement {
+		repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+		repositories {
+			mavenCentral()
+			maven { url 'https://jitpack.io' }
+		}
+	}
+    ```
+2. Step 2. Add the dependency
+    ```gradle
+    dependencies {
+	        implementation 'com.github.kevinvane:EasyPlayerPro-Android-OpenGL:14210703-1.4.21.0703'
+	}
+    ```
+    
+### 构建本项目 Build project
 
 1. 克隆 Clone
     ```shell
@@ -35,10 +54,12 @@ Three filter effects can be realized by calling the `IjkVideoView` interface:
 
 3. 引入 implementation
     ```gradle
-    implementation project(':ijkplayer-java')
+    dependencies {
+	        implementation project(':ijkplayer-java')
+	}
     ```
 
-4. 实时调用滤镜效果示例 Dynamically call functions to see filter effects in real time
+### 如何使用 How to use
     ```java
     IjkVideoView.setBrightness(value); //设置亮度，value范围 [-1.0, 1.0], 默认为 0.0，负数调暗，正数调亮
     IjkVideoView.setContrast(value); //设置对比度，value范围 [0.0,2.0], 默认为 1.0
