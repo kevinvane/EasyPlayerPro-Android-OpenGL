@@ -45,15 +45,19 @@ Three filter effects can be realized by calling the `IjkVideoView` interface:
     IjkVideoView.setSaturation(value); //设置饱和度，value范围[0.0, 2.0], 默认为 1.0
     ```
 
-### 预览 Preview
+### 预览图 Preview Image
 
+<img src="./preview/preview.png" controls width="500"/>
+
+<!--
 <div align="center">
 <img src="./preview/preview.png" controls width="500"/>
 </div>
+-->
 
-<div align="center">
-<video src="./preview/preview.mp4" controls width="500"></video>
-</div>
+### 预览Demo Preview Demo
+
+https://github.com/user-attachments/assets/7f13ea4f-a3b1-4412-9233-508393ec8eb5
 
 ### 下载示例APK Download Sample APK
 [【EasyPlayerPro-14210703-1.4.21.0703.apk】](./apk/EasyPlayerPro-14210703-1.4.21.0703.apk)
