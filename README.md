@@ -60,11 +60,11 @@ Three filter effects can be realized by calling the `IjkVideoView` interface:
     ```
 
 ### 如何使用 How to use
-    ```java
-    IjkVideoView.setBrightness(value); //设置亮度，value范围 [-1.0, 1.0], 默认为 0.0，负数调暗，正数调亮
-    IjkVideoView.setContrast(value); //设置对比度，value范围 [0.0,2.0], 默认为 1.0
-    IjkVideoView.setSaturation(value); //设置饱和度，value范围[0.0, 2.0], 默认为 1.0
-    ```
+```java
+IjkVideoView.setBrightness(value); //设置亮度，value范围 [-1.0, 1.0], 默认为 0.0，负数调暗，正数调亮
+IjkVideoView.setContrast(value); //设置对比度，value范围 [0.0,2.0], 默认为 1.0
+IjkVideoView.setSaturation(value); //设置饱和度，value范围[0.0, 2.0], 默认为 1.0
+```
 
 ### 预览图 Preview Image
 
