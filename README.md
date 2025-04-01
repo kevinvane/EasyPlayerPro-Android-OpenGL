@@ -7,14 +7,13 @@ Based on [【EasyPlayerPro-Android】](https://github.com/EasyDarwin/EasyPlayerP
 ## OpenGL视频滤镜 OpenGL Video Filters
 
 滤镜采用 `OpenGL2.0` + `GLSurfaceView` 实现，具体阅读 `GLSurfaceRenderView` 类源码。
-The filter is implemented by `OpenGL2.0` + `GLSurfaceView`, read the source code of `GLSurfaceRenderView` class for details.
-
-
 
 调用 `IjkVideoView` 的接口就可以实现三个滤镜效果：
 * 亮度
 * 对比度
 * 饱和度
+
+The filter is implemented by `OpenGL2.0` + `GLSurfaceView`, read the source code of `GLSurfaceRenderView` class for details.
 
 Three filter effects can be realized by calling the `IjkVideoView` interface:
 * Brightness
